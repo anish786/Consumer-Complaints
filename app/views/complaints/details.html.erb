@@ -7,6 +7,8 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
 
 <div class="jumbotron">
     <h1 align="center" class ="text-info">Consumer Complaints</h1> 
@@ -16,7 +18,7 @@
       <% @detail.each do |item|%>
       <% if item.complaint_id == @company_complaint_id %>
       <h2 align="center">Details of Complaint ID: <%= item.complaint_id %> </h2>
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-inverse">
     <tbody>
       <tr>
         <th data-field="key" class="key">Complaint ID</th>
@@ -161,7 +163,7 @@
       <% end %>
   </tbody>
   </table>
-  <% end %>          
+  <% end %> 
 </div>
 </body>
 </html>

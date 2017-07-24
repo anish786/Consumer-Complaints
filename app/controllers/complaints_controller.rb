@@ -2,10 +2,6 @@ require 'soda/client'
 
 class ComplaintsController < ApplicationController
   def index
-#   	client = SODA::Client.new({:domain => 'data.consumerfinance.gov', :app_token => '
-# CzLtl1TzwgEKqiIJ9eRKmHtMv'})
-# 	 @results = client.get("jhzv-w97w", {"$where" => "company LIKE '%Alpine Credit%'"})
-
   end
 
   def results

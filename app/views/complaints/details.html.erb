@@ -20,142 +20,142 @@
     <tbody>
       <tr>
         <th data-field="key" class="key">Complaint ID</th>
-        <th data-field="value"><%= item.complaint_id %></th>
+        <td data-field="value"><%= item.complaint_id %></td>
       </tr>
       <tr>
         <th data-field="key" class="key">Company</th>
         <% if item.company != nil %>
-          <th data-field="value"><%= item.company %></th>
+          <td data-field="value"><%= item.company %></td>
         <% else %>
-          <th data-field="value">None</th>
+          <td data-field="value">None</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Date received</th>
         <% if item.date_received != nil %>
-        <th data-field="value"><%= (Time.parse(item.date_received).to_date).strftime("%B %d, %Y") %></th>
+        <td data-field="value"><%= (Time.parse(item.date_received).to_date).strftime("%B %d, %Y") %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Product</th>
         <% if item.product != nil %>
-          <th data-field="value"><%= item.product %></th>
+          <td data-field="value"><%= item.product %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Sub-product</th>
         <% if item.sub_product != nil %>
-          <th data-field="value"><%= item.sub_product %></th>
+          <td data-field="value"><%= item.sub_product %></td>
         <% else %>
-          <th data-field="value">None</th>
+          <td data-field="value">None</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Issue</th>
         <% if item.issue != nil %>
-          <th data-field="value"><%= item.issue %></th>
+          <td data-field="value"><%= item.issue %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Sub Issue</th>
         <% if item.sub_issue != nil %>
-          <th data-field="value"><%= item.sub_issue %></th>
+          <td data-field="value"><%= item.sub_issue %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Consumer complaint narrative</th>
         <% if item.complaint_what_happened != nil %>
-          <th data-field="value"><%= item.complaint_what_happened %></th>
+          <td data-field="value"><%= item.complaint_what_happened %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Company public response</th>
         <% if item.company_public_response != nil %>
-          <th data-field="value"><%= item.company_public_response %></th>
+          <td data-field="value"><%= item.company_public_response %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Company response to consumer</th>
         <% if item.company_response != nil %>
-          <th data-field="value"><%= item.company_response %></th>
+          <td data-field="value"><%= item.company_response %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Consumer consent provided</th>
         <% if item.consumer_consent_provided != nil %>
-          <th data-field="value"><%= item.consumer_consent_provided %></th>
+          <td data-field="value"><%= item.consumer_consent_provided %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Timely response</th>
         <% if item.timely != nil %>
-          <th data-field="value"><%= item.timely %></th>
+          <td data-field="value"><%= item.timely %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Consumer disputed</th>
         <% if item.consumer_disputed != nil %>
-          <th data-field="value"><%= item.consumer_disputed %></th>
+          <td data-field="value"><%= item.consumer_disputed %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Tags</th>
         <% if item.tags != nil %>
-          <th data-field="value"><%= item.tags %></th>
+          <td data-field="value"><%= item.tags %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">State</th>
         <% if item.state != nil %>
-          <th data-field="value"><%= item.state %></th>
+          <td data-field="value"><%= item.state %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Zip code</th>
         <% if item.zip_code != nil %>
-          <th data-field="value"><%= item.zip_code %></th>
+          <td data-field="value"><%= item.zip_code %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Date sent to company</th>
         <% if item.date_sent_to_company != nil %>
-          <th data-field="value"><%= (Time.parse(item.date_sent_to_company).to_date).strftime("%B %d, %Y") %></th>
+          <td data-field="value"><%= (Time.parse(item.date_sent_to_company).to_date).strftime("%B %d, %Y") %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <tr>
         <th data-field="key" class="key">Submitted via</th>
         <% if item.submitted_via != nil %>
-          <th data-field="value"><%= item.submitted_via %></th>
+          <td data-field="value"><%= item.submitted_via %></td>
         <% else %>
-          <th data-field="value">No data</th>
+          <td data-field="value">No data</td>
         <% end %>
       </tr>
       <% end %>

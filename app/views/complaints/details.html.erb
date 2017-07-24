@@ -1,0 +1,176 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<div class="jumbotron">
+    <h1 align="center" class ="text-info">Consumer Complaints</h1> 
+    <p align="center">Get the list of complaints of a comsumer with just one search...</p>
+
+    <!-- <br><br>
+    <div class="col-lg-6">
+    <div class="input-group"> -->
+      <!-- <input type="text" name="company" class="form-control" placeholder="Search for company">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Search</button>
+      </span> -->
+    <!--</div><!-- /input-group -->
+  <!--</div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+<div class="container">
+      <% @detail.each do |item|%>
+      <% if item.complaint_id == @company_complaint_id %>
+    <table class="table table-bordered table-striped">
+    <tbody>
+      <tr>
+        <th data-field="key" class="key">Complaint ID</th>
+        <th data-field="value"><%= item.complaint_id %></th>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Company</th>
+        <% if item.company != nil %>
+          <th data-field="value"><%= item.company %></th>
+        <% else %>
+          <th data-field="value">None</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Date received</th>
+        <% if item.date_received != nil %>
+        <th data-field="value"><%= (Time.parse(item.date_received).to_date).strftime("%B %d, %Y") %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Product</th>
+        <% if item.product != nil %>
+          <th data-field="value"><%= item.product %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Sub-product</th>
+        <% if item.sub_product != nil %>
+          <th data-field="value"><%= item.sub_product %></th>
+        <% else %>
+          <th data-field="value">None</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Issue</th>
+        <% if item.issue != nil %>
+          <th data-field="value"><%= item.issue %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Sub Issue</th>
+        <% if item.sub_issue != nil %>
+          <th data-field="value"><%= item.sub_issue %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Consumer complaint narrative</th>
+        <% if item.complaint_what_happened != nil %>
+          <th data-field="value"><%= item.complaint_what_happened %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Company public response</th>
+        <% if item.company_public_response != nil %>
+          <th data-field="value"><%= item.company_public_response %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Company response to consumer</th>
+        <% if item.company_response != nil %>
+          <th data-field="value"><%= item.company_response %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Consumer consent provided</th>
+        <% if item.consumer_consent_provided != nil %>
+          <th data-field="value"><%= item.consumer_consent_provided %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Timely response</th>
+        <% if item.timely != nil %>
+          <th data-field="value"><%= item.timely %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Consumer disputed</th>
+        <% if item.consumer_disputed != nil %>
+          <th data-field="value"><%= item.consumer_disputed %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Tags</th>
+        <% if item.tags != nil %>
+          <th data-field="value"><%= item.tags %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">State</th>
+        <% if item.state != nil %>
+          <th data-field="value"><%= item.state %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Zip code</th>
+        <% if item.zip_code != nil %>
+          <th data-field="value"><%= item.zip_code %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Date sent to company</th>
+        <% if item.date_sent_to_company != nil %>
+          <th data-field="value"><%= (Time.parse(item.date_sent_to_company).to_date).strftime("%B %d, %Y") %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <tr>
+        <th data-field="key" class="key">Submitted via</th>
+        <% if item.submitted_via != nil %>
+          <th data-field="value"><%= item.submitted_via %></th>
+        <% else %>
+          <th data-field="value">No data</th>
+        <% end %>
+      </tr>
+      <% end %>
+  </tbody>
+  </table>
+  <% end %>          
+</div>
+</body>
+</html>
